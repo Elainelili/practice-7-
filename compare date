@@ -20,18 +20,13 @@ Example Test Cases:
 """
 
 
-def date_passed(todays_date, scheduled_date):
-   from datetime import datetime
 
 def date_passed(todays_date, scheduled_date):
-    # Define the date format
     date_format = "%dth %B"
-
-    # Convert the string dates to datetime objects
     todays_date = datetime.strptime(todays_date, date_format)
     scheduled_date = datetime.strptime(scheduled_date, date_format)
 
-    # Compare the two dates and print the appropriate message
+   
     if todays_date > scheduled_date:
         print("The scheduled date has passed.")
     elif todays_date < scheduled_date:
